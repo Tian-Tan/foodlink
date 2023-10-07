@@ -61,7 +61,7 @@ a:hover{
 
 body{
     overflow-x:hidden;
-    background:#22311d;
+    background:linear-gradient(454deg,#355E3B,#008000);
 }
 
 .container{
@@ -128,5 +128,6 @@ ul li{
     max-width:350px;
     margin-left:500px;
     margin-top:-75px;
-
 }
+
+
