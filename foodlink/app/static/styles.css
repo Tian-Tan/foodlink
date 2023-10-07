@@ -1,0 +1,132 @@
+.random {
+    margin-top:0px;
+    text-align:center;
+    font-size:75px;
+    color:white;
+}
+
+.navigation{
+    text-align:center;
+    font-size:30px;
+    text-transform: uppercase;
+    letter-spacing:1px;
+    word-spacing:20px;
+    margin-top:20px;
+    margin-right:-50px;
+    
+}
+
+header .navigation a{
+    color:whitesmoke;
+    text-decoration:none;
+}
+a:hover{
+    color:green;
+}
+
+#searchBar{
+    margin-top:300px;
+    font-size:50px;
+}
+
+#searchBar ::placeholder{
+    font-size:0px;
+}
+
+#searchButton{
+    font-size:35px;
+    text-transform:uppercase;
+}
+.recipes{
+    margin-top:50px;
+    margin-left:-1200px;
+    font-size:40px;
+    color:white;
+}
+
+.slide1{
+    margin-right:1200px;
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+.slide1 img{
+    height:auto;
+    width:300px;
+    margin-left:50px;
+    margin-top:-100px;
+}
+
+body{
+    overflow-x:hidden;
+    background:#22311d;
+}
+
+.container{
+    width:100%;
+    height:100vh;
+}
+#line{
+    max-width:1400px;
+    border:1.5px solid white;
+}
+
+.text1{
+    font-size:30px;
+    max-width:700px;
+    margin-left:410px;
+    margin-top:220px;
+    position:absolute;
+}
+
+.hie{
+    font-size:45px;
+    position:absolute;
+    margin-left:550px;
+    margin-top:140px;
+}
+
+.appletext{
+    font-size:35px;
+    position:absolute;
+    margin-top:-600px;
+    margin-left:50px;
+}
+
+ul li{
+    margin-bottom:20px;
+}
+
+.bullet{
+    font-size:30px;
+    margin-left:625px;
+    margin-top:-100px;
+
+}
+
+.recipe3{
+    font-size:40px;
+    position:absolute;
+    right:0;
+    margin-top:-600px;
+    margin-right:250px;
+}
+
+.description{
+    position:absolute;
+    font-size:40px;
+    right:0;
+    margin-top:-600px;
+    margin-right:750px;
+}
+
+.description2{
+    font-size:39px;
+    position:absolute;
+    max-width:350px;
+    margin-left:500px;
+    margin-top:-75px;
+
+}
