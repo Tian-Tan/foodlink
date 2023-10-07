@@ -4,63 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodlink | Results</title>
-    <link rel="stylesheet" type="text/css" href="../static/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Encode+Sans+Semi+Condensed:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        body {
+             font-family: 'Poppins', sans-serif;
+         }
+         .random {
+    margin-top:0px;
+    text-align:left;
+    font-size:75px;
+    color:white;
+}
+
+.navigation{
+    text-align:center;
+    font-size:30px;
+    text-transform: uppercase;
+    letter-spacing:1px;
+    word-spacing:20px;
+    margin-top:0px;
+    margin-right:-800px;
+    font-weight: bold;
+}
+
+header .navigation a{
+    color:whitesmoke;
+    text-decoration:none;
+}
+a:hover{
+    color:green;
+}
+body{
+    overflow-x:hidden;
+    background:#b63c40;
+}
+
+.container{
+    width:100%;
+    height:100vh;
+}
+ul li{
+    margin-bottom:0px;
+    font-size: 15px;
+}
+.container {
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            flex-direction: row;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .card {
+            width: 400px;
+            margin: 50px;
+            padding: 15px;
+            border-style: solid;
+            border-radius: 15px;
+            background-color: rgba(255, 214, 176, 0.7);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h3 {
+            color: rgb(255, 255, 255);
+            font-size: 15px;
+        }
+        .button button {
+            border: solid;
+            color: black;
+            padding: 16px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 20px;
+            margin: 20px;
+            cursor: pointer;
+            background-color: rgb(221, 173, 128);
+            border-radius: 12px;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        button:hover {
+            background-color: rgb(213, 105, 4);
+        }
+
+        .button {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button2 button {
+            border: solid;
+            color: black;
+            padding: 8px 16px;
+            text-align: center;
+            display: inline-block;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: rgb(221, 173, 128);
+            border-radius: 12px;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .button2 button:hover {
+            background-color: rgb(213, 105, 4);
+        }
+     </style>
 </head>
 <body>
     <h1 class="random">Food Link</div>
         <header>
             <div class="navigation">
             <a href="{% url 'home' %}">Home</a>
-            <a href="{% url 'foodbank' %}">Food Bank Finder</a>
+            <a href="{% url 'foodbank' %}">Food_Bank</a>
             <a href="{% url 'resources' %}">Resources</a>
             <a href="{% url 'about' %}">About</a>
         </header>
         <div class="title">
             <h1 style="font-size: 50px; text-decoration: underline;">Recipe Recommendations</h1>
         </div>
+        <div class="button">
+            <button onClick="window.location.reload();">I want a different recommendation</button>
+        </div>
         <div class="container">
             <div class="card button2">
                 <h2 style="font-size: 25px;">{{ 1_name }}</h2>
-                <h2 style="font-size: 10px;">Calories: {{ 1_calories }}</h2>
+                <h2 style="font-size: 18px;">Calories: {{ 1_calories }}</h2>
                 <img src="{{ 1_image }}"
                     width="90%" />
-                <h3>Ingredients:</h3>
+                <h3 style="font-size: 15px;">Ingredients:</h3>
                 <ol>
                     {% for i in 1_ingredients %}
-                    <li>{{ i }}</li>
+                    <li style="font-size: 15px;">{{ i }}</li>
                     {% endfor %}
                 </ol>
                 <a href="{{ 1_info }}"><button type="button">More Info</button></a>
             </div>
             <div class="card button2">
                 <h2 style="font-size: 25px;">{{ 2_name }}</h2>
-                <h2 style="font-size: 10px;">Calories: {{ 2_calories }}</h2>
+                <h2 style="font-size: 18px;">Calories: {{ 2_calories }}</h2>
                 <img src="{{ 2_image }}" width="90%"
                      />
-                <h3>Ingredients:</h3>
+                <h3 style="font-size: 15px;">Ingredients:</h3>
                 <ol>
                     {% for i in 2_ingredients %}
-                    <li>{{ i }}</li>
+                    <li style="font-size: 15px;">{{ i }}</li>
                     {% endfor %}
                 </ol>
                 <a href="{{ 2_info }}"><button type="button">More Info</button></a>
             </div>
             <div class="card button2">
                 <h2 style="font-size: 25px;">{{ 3_name }}</h2>
-                <h2 style="font-size: 10px;">Calories: {{ 3_calories }}</h2>
+                <h2 style="font-size: 18px;">Calories: {{ 3_calories }}</h2>
                 <img src="{{ 3_image }}" width="90%"
                      />
-                <h3>Ingredients:</h3>
+                <h3 style="font-size: 15px;">Ingredients:</h3>
                 <ol>
                     {% for i in 3_ingredients %}
-                    <li>{{ i }}</li>
+                    <li style="font-size: 15px;">{{ i }}</li>
                     {% endfor %}
                 </ol>
                 <a href="{{ 3_info }}"><button type="button">More Info</button></a>
             </div>
+            <!--
             <div class="card button2">
                 <h2 style="font-size: 25px;">{{ 4_name }}</h2>
-                <h2 style="font-size: 10px;">Calories: {{ 4_calories }}</h2>
+                <h2 style="font-size: 18px;">Calories: {{ 4_calories }}</h2>
                 <img src="{{ 4_image }}" width="90%"
                      />
                 <h3>Ingredients:</h3>
@@ -73,7 +187,7 @@
             </div>
             <div class="card button2">
                 <h2 style="font-size: 25px;">{{ 5_name }}</h2>
-                <h2 style="font-size: 10px;">Calories: {{ 5_calories }}</h2>
+                <h2 style="font-size: 18px;">Calories: {{ 5_calories }}</h2>
                 <img src="{{ 5_image }}" width="90%"
                      />
                 <h3>Ingredients:</h3>
@@ -84,9 +198,7 @@
                 </ol>
                 <a href="{{ 5_info }}"><button type="button">More Info</button></a>
             </div>
-        </div>
-        <div class="button">
-            <button onClick="window.location.reload();">I want a different recommendation</button>
+        -->
         </div>
     </body>
     </html>
