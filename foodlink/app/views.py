@@ -6,7 +6,10 @@ import json
 
 def search(ingredients):
     s = "https://api.edamam.com/api/recipes/v2?type=public&q=" + ingredients + "&app_id=02b624bb&app_key=dd51796fcd6547eccd4141d1f2454ef4"
-    response = requests.get(s)
+    try:
+        response = requests.get(s)
+    except:
+        return None
     #print(response.status_code)
     r1 = get_everything(response, 0)
     r2 = get_everything(response, 1)
@@ -47,7 +50,10 @@ def home_view(request, *args, **kargs):
     if request.method == 'POST':
         user_input = request.POST.get('search')
         recipes = search(str(user_input))
-        context = {
+        if recipes == None:
+            return render(request, 'error.html', {})
+        else:
+            context = {
             "1_name": recipes[0]['label'],
             "1_image": recipes[0]['image'],
             "1_ingredients": recipes[0]['ingredients'], #list
@@ -73,9 +79,9 @@ def home_view(request, *args, **kargs):
             "5_ingredients": recipes[4]['ingredients'], #list
             "5_info": recipes[4]['url'],
             "5_calories": recipes[4]['calories'],
-        }
-        return render(request, 'results.html', context)
-    return render(request, 'index.html', {})
+            }
+            return render(request, 'results.html', context)
+        return render(request, 'index.html', {})
 
 def about_view(request, *args, **kargs):
     return render(request, 'aboutUs.html', {})
@@ -83,3 +89,5 @@ def about_view(request, *args, **kargs):
 def result_view(request, *args, **kargs):
     return render(request, 'results.html', {})
 '''
+def error_view(request, *args, **kargs):
+    return render(request, 'error.html', {})
