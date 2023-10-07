@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
     <link rel="stylesheet" type="text/css" href="../static/styles.css">
+    <script src="https://kit.fontawesome.com/48830d5567.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Encode+Sans+Semi+Condensed:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        body {
+             font-family: 'Poppins', sans-serif;
+         }
+     </style>
 </head>
 <body>
     <header>
@@ -17,8 +24,11 @@
     <h1 class="random">FoodLink</div>
     <form class="search" action="/" method="post">
         {% csrf_token %}
-        <input id="searchBar" placeholder="Enter your ingredients" name="search">
-        <button type="submit" value="success">Search recipes</button>
+        <input id="searchBar" placeholder="Type here.." name="search">
+        <label for="" class="icon">
+            <button type="submit" value="success"><i class="fas fa-search">
+            </i></button>
+        </label>
     </form>
     <div class="recipes"> Top Recipes
     </div>
