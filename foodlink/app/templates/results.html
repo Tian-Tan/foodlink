@@ -21,6 +21,7 @@
         <div class="container">
             <div class="card button2">
                 <h2 style="font-size: 25px;">{{ 1_name }}</h2>
+                <h2 style="font-size: 10px;">{{ 1_calories }}</h2>
                 <img src="{{ 1_image }}"
                     width="90%" />
                 <h3>Ingredients:</h3>
@@ -33,6 +34,7 @@
             </div>
             <div class="card button2">
                 <h2 style="font-size: 25px;">{{ 2_name }}</h2>
+                <h2 style="font-size: 10px;">{{ 2_calories }}</h2>
                 <img src="{{ 2_image }}" width="90%"
                      />
                 <h3>Ingredients:</h3>
@@ -45,6 +47,7 @@
             </div>
             <div class="card button2">
                 <h2 style="font-size: 25px;">{{ 3_name }}</h2>
+                <h2 style="font-size: 10px;">{{ 3_calories }}</h2>
                 <img src="{{ 3_image }}" width="90%"
                      />
                 <h3>Ingredients:</h3>
@@ -54,6 +57,32 @@
                     {% endfor %}
                 </ol>
                 <a href="{{ 3_info }}"><button type="button">More Info</button></a>
+            </div>
+            <div class="card button2">
+                <h2 style="font-size: 25px;">{{ 4_name }}</h2>
+                <h2 style="font-size: 10px;">{{ 4_calories }}</h2>
+                <img src="{{ 4_image }}" width="90%"
+                     />
+                <h3>Ingredients:</h3>
+                <ol>
+                    {% for i in 4_ingredients %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ol>
+                <a href="{{ 4_info }}"><button type="button">More Info</button></a>
+            </div>
+            <div class="card button2">
+                <h2 style="font-size: 25px;">{{ 5_name }}</h2>
+                <h2 style="font-size: 10px;">{{ 5_calories }}</h2>
+                <img src="{{ 5_image }}" width="90%"
+                     />
+                <h3>Ingredients:</h3>
+                <ol>
+                    {% for i in 5_ingredients %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ol>
+                <a href="{{ 5_info }}"><button type="button">More Info</button></a>
             </div>
         </div>
         <div class="button">
