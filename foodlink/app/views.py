@@ -81,7 +81,7 @@ def home_view(request, *args, **kargs):
             "5_calories": recipes[4]['calories'],
             }
             return render(request, 'results.html', context)
-        return render(request, 'index.html', {})
+    return render(request, 'index.html', {})
 
 def about_view(request, *args, **kargs):
     return render(request, 'aboutUs.html', {})
@@ -91,3 +91,9 @@ def result_view(request, *args, **kargs):
 '''
 def error_view(request, *args, **kargs):
     return render(request, 'error.html', {})
+
+def foodbank_view(request, *args, **kargs):
+    return render(request, 'foodbank.html', {})
+
+def resources_view(request, *args, **kargs):
+    return render(request, 'resources.html', {})

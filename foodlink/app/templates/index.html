@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Foodlink | Home</title>
     <link rel="stylesheet" type="text/css" href="../static/styles.css">
     <script src="https://kit.fontawesome.com/48830d5567.js" crossorigin="anonymous"></script>
     <style>
@@ -16,10 +16,10 @@
 <body>
     <header>
         <div class="navigation">
-        <a href="/">Home</a>
-        <a href="/">Food_Bank</a>
-        <a href="/">Resources</a>
-        <a href="/">About</a>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'foodbank' %}">Food Bank Finder</a>
+        <a href="{% url 'resources' %}">Resources</a>
+        <a href="{% url 'about' %}">About</a>
     </header>
     <h1 class="random">FoodLink</div>
     <form class="search" action="/" method="post">
@@ -30,13 +30,14 @@
             </i></button>
         </label>
     </form>
-    <div class="recipes"> Top Recipes
+    <div class="recipes">
+    <h2>Top Recipes</h2>
     </div>
     <hr id="line">
     <div class="container"> 
         <div class="slide1">
             <p class="appletext">Apple Pie</p>
-            <img src="/foodlink\foodlink\foodlink\app\static\images\applepie.jpg">
+            <img src="../static/images/applepie.jpg">
             <p class="ingredients">
                 <p class="description">Description</p>
                 <p class="description2">Apple pie is a classic dessert made with a flaky pastry crust filled with sliced apples, sugar, and spices, typically cinnamon, and baked until golden and delicious.</p>
@@ -56,7 +57,7 @@
     <hr id="line">
     <div class="slide1">
         <p class="appletext">Brownie</p>
-        <img src="/foodlink\foodlink\foodlink\app\static\images\brownie.jpg">
+        <img src="../static/images/brownie.jpg">
         <p class="ingredients">
             <p class="description">Description</p>
             <p class="description2">Dense, fudgy squares of dessert, rich in cocoa and often studded with chocolate chips or nuts. They're baked to perfection and loved for their chewy, chocolatey goodness.</p>
@@ -77,7 +78,7 @@
 <hr id="line">
 <div class="slide1">
     <p class="appletext">Thai Curry Rice</p>
-    <img src="/foodlink\foodlink\foodlink\app\static\images\thai.jpg">
+    <img src="../static/images/thai.jpg">
     <p class="ingredients">
         <p class="description">Description</p>
         <p class="description2">Thai curry is a creamy, spicy dish with herbs, spices, coconut milk, and your choice of protein or veggies, served with rice or noodles.</p>
@@ -97,7 +98,7 @@
 <hr id="line">
 <div class="slide1">
     <p class="appletext">Steak</p>
-    <img src="/foodlink\foodlink\foodlink\app\static\images\steak.jpg">
+    <img src="../static/images/steak.jpg">
     <p class="ingredients">
         <p class="description">Description</p>
         <p class="description2">Thick, juicy cut of meat, typically beef, that's cooked to your preferred level of doneness and often seasoned for a savory and satisfying meal.</p>
@@ -117,7 +118,7 @@
 <hr id="line">
 <div class="slide1">
     <p class="appletext">Corn Casserole</p>
-    <img src="/foodlink\foodlink\foodlink\app\static\images\corn.jpg">
+    <img src="../static/images/corn.jpg">
     <p class="ingredients">
         <p class="description">Description</p>
         <p class="description2">Comforting side dish made with sweet corn, creamy ingredients like sour cream or cheese, and often baked until it's golden and delicious.</p>
