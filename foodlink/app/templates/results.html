@@ -15,5 +15,49 @@
             <a href="index.html">Resources</a>
             <a href="index.html">About</a>
         </header>
+        <div class="title">
+            <h1 style="font-size: 50px; text-decoration: underline;">Recipe Recommendations</h1>
+        </div>
+        <div class="container">
+            <div class="card button2">
+                <h2 style="font-size: 25px;">{{ 1_name }}</h2>
+                <img src="{{ 1_image }}"
+                    width="90%" />
+                <h3>Ingredients:</h3>
+                <ol>
+                    {% for i in 1_ingredients %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ol>
+                <a href="{{ 1_info }}"><button type="button">More Info</button></a>
+            </div>
+            <div class="card button2">
+                <h2 style="font-size: 25px;">{{ 2_name }}</h2>
+                <img src="{{ 2_image }}" width="90%"
+                     />
+                <h3>Ingredients:</h3>
+                <ol>
+                    {% for i in 2_ingredients %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ol>
+                <a href="{{ 2_info }}"><button type="button">More Info</button></a>
+            </div>
+            <div class="card button2">
+                <h2 style="font-size: 25px;">{{ 3_name }}</h2>
+                <img src="{{ 3_image }}" width="90%"
+                     />
+                <h3>Ingredients:</h3>
+                <ol>
+                    {% for i in 3_ingredients %}
+                    <li>{{ i }}</li>
+                    {% endfor %}
+                </ol>
+                <a href="{{ 3_info }}"><button type="button">More Info</button></a>
+            </div>
+        </div>
+        <div class="button">
+            <button onClick="window.location.reload();">I want a different recommendation</button>
+        </div>
     </body>
     </html>
