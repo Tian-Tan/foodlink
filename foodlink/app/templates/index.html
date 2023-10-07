@@ -15,9 +15,10 @@
         <a href="/">About</a>
     </header>
     <h1 class="random">FoodLink</div>
-    <form class="form">
-        <input id="searchBar"type="search">
-        <button id="searchButton">Search</button>
+    <form class="search" action="/" method="post">
+        {% csrf_token %}
+        <input id="searchBar" placeholder="Enter your ingredients" name="search">
+        <button type="submit" value="success">Search recipes</button>
     </form>
     <div class="recipes"> Top Recipes
     </div>
