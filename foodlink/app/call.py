@@ -1,10 +1,10 @@
 import requests
 import json
 
-def search (ingredients):
+def search(ingredients):
     s = "https://api.edamam.com/api/recipes/v2?type=public&q=" + ingredients + "&app_id=02b624bb&app_key=dd51796fcd6547eccd4141d1f2454ef4"
     response = requests.get(s)
-    print(response.status_code)
+    #print(response.status_code)
     r1 = get_everything(response, 0)
     r2 = get_everything(response, 1)
     r3 = get_everything(response, 2)
